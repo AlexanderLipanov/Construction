@@ -58,13 +58,14 @@ if(links.length > 0)
         const menuLink = e.target;
 
         var d = document.getElementById("page").scrollTop;
+
         const gotoBlock = document.querySelector(menuLink.dataset.goto);
         let t = gotoBlock.getBoundingClientRect().top;
-        let b = document.querySelector("toolbar");
+        let b = document.querySelector(".toolbar");
         let h = b === undefined || b === null ? 50 : b.offsetHeight;
         const gotoBlockValue = d + t + scrollY - h - 20;
-
-        document.body.scrollTo({
+        console.log(gotoBlockValue + " gotoBlockValue");
+        document.getElementById("page").scrollTo({
             left: null,
             top: gotoBlockValue,
             behavior: "smooth",
