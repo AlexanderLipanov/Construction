@@ -64,7 +64,7 @@ if(links.length > 0)
         let h = b === undefined || b === null ? 50 : b.offsetHeight;
         const gotoBlockValue = d + t + scrollY - h - 20;
 
-        document.getElementById("page").scrollTo({
+        document.body.scrollTo({
             left: null,
             top: gotoBlockValue,
             behavior: "smooth",
