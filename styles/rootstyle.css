@@ -46,6 +46,10 @@ p {
     flex-direction: row;
 }
 
+.justify-around {
+    justify-content: space-around;
+}
+
 .justify-between {
     justify-content: space-between;
 }

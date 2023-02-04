@@ -42,8 +42,15 @@ function toggleBurger() {
     let m = document.getElementById("burger-menu");
 
     m.classList.toggle("active-menu");
+}
 
-    
+function closeBurger()
+{
+    let m = document.getElementById("burger-menu");
+
+    if(m.classList.contains("active-menu")) {
+        m.classList.toggle("active-menu");
+    }
 }
 
 function activatingPage(pageId, btnId) {
@@ -80,5 +87,7 @@ function activatingPage(pageId, btnId) {
             behavior: "smooth",
         });
     });
+
+    closeBurger();
 }
 
