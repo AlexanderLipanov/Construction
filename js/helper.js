@@ -64,6 +64,12 @@ function activatingPage(pageId, btnId) {
         } else {
             p.classList.remove("active-page");
         }
+
+        p.scrollTo({
+            left: null,
+            top: 0,
+            behavior: "smooth",
+        });
     });
 }
 
