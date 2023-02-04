@@ -15,6 +15,9 @@
 <body>
     <div style="display: block;" class="full-width">
             <div class="toolbar d-flex flex-r justify-between toolbar">
+                <button onclick="toggleBurger()" class="burger">
+                    <img alt="menu" src="./icons/Status_listmenu.png" />
+                </button>
                 <button id="page-btn-1" name="page-btn" onclick="activatingPage('page-1', 'page-btn-1')"  href="#" style="text-align: center;" class="toolbar-btn fw-500 fs-32 typography-style">
                     Главная
                 </button>     
@@ -22,6 +25,17 @@
                     О нас
                 </button>
                 <button id="page-btn-3" name="page-btn" onclick="activatingPage('page-3', 'page-btn-3')"  href="#" style="text-align: center;" class="toolbar-btn fw-500 fs-32 typography-style">
+                    Контакты
+                </button>
+            </div>
+            <div id="burger-menu" style="width: 300px; display: none; height: 300px; position: fixed; margin-top: 50px;" class="flex-c justify-between align-center">
+                <button id="page-btn-1" style="border: none; cursor: pointer; background: none; " name="page-btn" onclick="activatingPage('page-1', 'page-btn-1')"  href="#" style="text-align: center;" class="fw-500 fs-32 typography-style">
+                    Главная
+                </button>     
+                <button id="page-btn-2" style="border: none; cursor: pointer; background: none;"  name="page-btn" onclick="activatingPage('page-2', 'page-btn-2')"  href="#" style="text-align: center;" class="fw-500 fs-32 typography-style">
+                    О нас
+                </button>
+                <button id="page-btn-3" style="border: none; cursor: pointer; background: none;"  name="page-btn" onclick="activatingPage('page-3', 'page-btn-3')"  href="#" style="text-align: center;" class="fw-500 fs-32 typography-style">
                     Контакты
                 </button>
             </div>

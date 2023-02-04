@@ -37,6 +37,15 @@ function init() {
     activatingPage("page-1", "page-btn-1");
 }
 
+function toggleBurger() {
+
+    let m = document.getElementById("burger-menu");
+
+    m.classList.toggle("active-menu");
+
+    
+}
+
 function activatingPage(pageId, btnId) {
 
     if(pageId === activePage) return;
