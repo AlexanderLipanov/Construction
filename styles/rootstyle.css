@@ -153,6 +153,14 @@ div {
 box-shadow: 8px 8px 18px 7px rgba(34, 60, 80, 0.2);
 }
 
+.active-page {
+    display: flex !important;
+}
+
+.dis-active-page {
+    display: none;
+}
+
 @media (max-width: 650px) {
     .aling-sc {
         align-items: center;

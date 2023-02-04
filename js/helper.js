@@ -28,47 +28,42 @@ const isMobile = {
     },
 };
 
-if(isMobile.any()) {
-    document.body.classList.add("touch");
+var activePage = "";
 
-    const elems = document.getElementsByName("scroll-button");    
+init();
 
-    if(elems.length > 0) {
-        elems.forEach(el => {
-            el.addEventListener("click", function(e) {
-                el.classList.toggle(" active");
-            });
-        });       
-    }
-} else {
-    document.body.classList.add("pc");
+function init() {
+
+    activatingPage("page-1", "page-btn-1");
 }
 
-const links = document.getElementsByName("scroll-button");
+function activatingPage(pageId, btnId) {
 
-if(links.length > 0)
-{
-    links.forEach(l => {
-        l.addEventListener("click", onMenuClick);
-    })
+    if(pageId === activePage) return;
+
+    activePage = pageId;
+
+    console.log("activate-page");
+    
+    let btns = document.getElementsByName("page-btn");
+
+    btns.forEach(b => {
+        if(b.id === btnId) {
+            b.classList.add("active-menu-btn");
+        } else {
+            b.classList.remove("active-menu-btn");
+        }
+        console.log("activate-buttons");
+    });
+
+    let pages = document.getElementsByName("page");
+
+    pages.forEach(p => {
+        if(p.id == pageId) {
+            p.classList.toggle("active-page");
+        } else {
+            p.classList.remove("active-page");
+        }
+    });
 }
 
-
-    function onMenuClick(e) {
-        const menuLink = e.target;
-
-        var d = document.getElementById("page").scrollTop;
-
-        const gotoBlock = document.querySelector(menuLink.dataset.goto);
-        let t = gotoBlock.getBoundingClientRect().top;
-        let b = document.querySelector(".toolbar");
-        let h = b === undefined || b === null ? 50 : b.offsetHeight;
-        const gotoBlockValue = d + t + scrollY - h - 20;
-        console.log(gotoBlockValue + " gotoBlockValue");
-        document.getElementById("page").scrollTo({
-            left: null,
-            top: gotoBlockValue,
-            behavior: "smooth",
-        });
-        e.preventDefault();   
-    }

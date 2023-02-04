@@ -14,208 +14,213 @@
 </head>
 <body>
     <div style="display: block;" class="full-width">
-        <div id="page" style="overflow-x: hidden; overflow-y: auto;" class="full-width full-page-height align-center d-flex flex-c scroll-dsable">
             <div class="toolbar d-flex flex-r justify-between toolbar">
-                <a data-goto=".home-key" href="#" style="text-align: center;"  name="scroll-button" class="toolbar-btn fw-500 fs-32 typography-style">
+                <button id="page-btn-1" name="page-btn" onclick="activatingPage('page-1', 'page-btn-1')"  href="#" style="text-align: center;" class="toolbar-btn fw-500 fs-32 typography-style">
                     Главная
-                </a>     
-                <a data-goto=".about-key" href="#" style="text-align: center;"  name="scroll-button" class="toolbar-btn fw-500 fs-32 typography-style">
+                </button>     
+                <button id="page-btn-2" name="page-btn" onclick="activatingPage('page-2', 'page-btn-2')"  href="#" style="text-align: center;" class="toolbar-btn fw-500 fs-32 typography-style">
                     О нас
-                </a>
-                <a data-goto=".contacts-key" href="#" style="text-align: center;"  name="scroll-button" class="toolbar-btn fw-500 fs-32 typography-style">
+                </button>
+                <button id="page-btn-3" name="page-btn" onclick="activatingPage('page-3', 'page-btn-3')"  href="#" style="text-align: center;" class="toolbar-btn fw-500 fs-32 typography-style">
                     Контакты
-                </a>
+                </button>
             </div>
-            <div style="margin-top: 100px; row-gap: 30px; column-gap: 30px; padding: 0 20px;" class="d-flex flex-rc aling-sc home-key">
-                <div style="flex: 1;" class="d-flex flex-c">
-                    <p style="color: rgba(2, 3, 3, 0.94); text-align: center;" class="typography-style fw-500 fs-32 full-width">
-                        Title
-                    </p>
-                    <p style="color: rgba(2, 3, 3, 0.94); text-align: center; margin-top: 10px;" class="typography-style fw-300 fs-22 full-width">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsum vero qui odit tenetur quae ratione voluptate vitae ut? Id eius dicta sapiente magnam illum excepturi. Vero eum totam nam.
-                    </p>
-                </div>
-                <div style="flex: 1; height: 200px;  background-color: bisque; border-radius: 8px;" class="d-flex flex-c card-shadow">
-                    
-                </div>
-            </div>
-            <div style="display: block;height: 400px; padding-bottom: 50px; margin-top: 70px;" class="full-width">
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">
-                        <div class="full-width full-height d-flex flex-c align-center">
-                            <div style="width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
-                                <!-- <img alt="a" src="./pictures/slide5.jpg" /> -->
-                            </div>
-                            <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
-                                <b>
-                                     project
-                                </b>
-                            </p>
-                        </div>
-                      </div>  
-                      <div class="swiper-slide">
-                        <div class="full-width full-height d-flex flex-c align-center">
-                            <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
-                                <!-- <img alt="a" src="./pictures/slide2.jpg" /> -->
-                            </div>
-                            <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
-                                <b>
-                                     project 1
-                                </b>
-                            </p>
-                        </div>
-                      </div>  
-                      <div class="swiper-slide">
-                        <div class="full-width full-height d-flex flex-c align-center">
-                            <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
-                                <!-- <img alt="a" src="./pictures/slide1.jpg" /> -->
-                            </div>
-                            <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
-                                <b>
-                                    project 2
-                                </b>
-                            </p>
-                        </div>
-                      </div>  
-                      <div class="swiper-slide">
-                        <div class="full-width full-height d-flex flex-c align-center">
-                            <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
-                                <!-- <img alt="a" src="./pictures/slide3.jpg" /> -->
-                            </div>
-                            <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
-                                <b>
-                                     project 3
-                                </b>
-                            </p>
-                        </div>
-                      </div>  
-                      <div class="swiper-slide">
-                        <div class="full-width full-height d-flex flex-c align-center">
-                            <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
-                                <!-- <img alt="a" src="./pictures/slide4.jpg" /> -->
-                            </div>
-                            <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
-                                <b>
-                                     Test Name 4
-                                </b>
-                            </p>
-                        </div>
-                      </div>                 
+            <div id="page-1" name="page" style="overflow-x: hidden; overflow-y: auto;" class="full-width full-page-height align-center dis-active-page flex-c scroll-dsable">
+                <div style="margin-top: 100px; row-gap: 30px; column-gap: 30px; padding: 0 20px;" class="d-flex flex-rc aling-sc home-key">
+                    <div style="flex: 1;" class="d-flex flex-c">
+                        <p style="color: rgba(2, 3, 3, 0.94); text-align: center;" class="typography-style fw-500 fs-32 full-width">
+                            Title
+                        </p>
+                        <p style="color: rgba(2, 3, 3, 0.94); text-align: center; margin-top: 10px;" class="typography-style fw-300 fs-22 full-width">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsum vero qui odit tenetur quae ratione voluptate vitae ut? Id eius dicta sapiente magnam illum excepturi. Vero eum totam nam.
+                        </p>
                     </div>
-                  </div>  
-            </div> 
-            <div style="padding: 0 20px; row-gap: 20px; margin-top: 50px;" class="full-width d-flex flex-c align-center">
-                <p class="typography-style fw-500 fs-32">
-                    Title
-                </p>
-                <div style="height: 400px; background-color: bisque; border-radius: 8px;" class="full-width card-shadow">
-    
-                </div>
-            </div>
-            <p style="font-size: 40px; margin-top: 100px;" class="typography-style fw-500 about-key">
-                Somebody text
-            </p>
-            <div style="margin-top: 100px; row-gap: 30px; column-gap: 30px; padding: 0 20px;" class="d-flex flex-rc aling-sc">
-                <div style="flex: 1; height: 200px;  background-color: bisque; border-radius: 8px;" class="d-flex flex-c card-shadow">
-                    
-                </div>
-                <div style="flex: 1;" class="d-flex flex-c">
-                    <p style="color: rgba(2, 3, 3, 0.94); text-align: center;" class="typography-style fw-500 fs-32 full-width">
-                        Title
-                    </p>
-                    <p style="color: rgba(2, 3, 3, 0.94); text-align: center; margin-top: 10px;" class="typography-style fw-300 fs-22 full-width">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsum vero qui odit tenetur quae ratione voluptate vitae ut? Id eius dicta sapiente magnam illum excepturi. Vero eum totam nam.
-                    </p>
-                </div>
-            </div>
-            <div style="display: block; margin-top: 100px;">
-                <div style="row-gap: 50px; column-gap: 50px; flex-wrap: wrap;" class="d-flex flex-rc justify-between">
-                    <div style="row-gap: 50px; column-gap: 50px; flex: 1;" class="d-flex flex-c align-center">
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
-                            </div>
-                            <p  style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
-                                Descriptio 
-                            </p>
-                        </div>
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
-                            </div>
-                            <p style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
-                                Description
-                            </p>
-                        </div>
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
-                            </div>
-                            <p style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
-                                Description
-                            </p>
-                        </div>
+                    <div style="flex: 1; height: 200px;  background-color: bisque; border-radius: 8px;" class="d-flex flex-c card-shadow">
+                        
                     </div>
-                    <div style="row-gap: 50px; flex: 1;" class="d-flex flex-c align-center">
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                </div>
+                <div style="display: block;height: 400px; padding-bottom: 50px; margin-top: 70px;" class="full-width">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <div class="full-width full-height d-flex flex-c align-center">
+                                <div style="width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
+                                    <!-- <img alt="a" src="./pictures/slide5.jpg" /> -->
+                                </div>
+                                <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
+                                    <b>
+                                         project
+                                    </b>
+                                </p>
                             </div>
-                            <p style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
-                                Dexcription
-                            </p>
+                          </div>  
+                          <div class="swiper-slide">
+                            <div class="full-width full-height d-flex flex-c align-center">
+                                <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
+                                    <!-- <img alt="a" src="./pictures/slide2.jpg" /> -->
+                                </div>
+                                <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
+                                    <b>
+                                         project 1
+                                    </b>
+                                </p>
+                            </div>
+                          </div>  
+                          <div class="swiper-slide">
+                            <div class="full-width full-height d-flex flex-c align-center">
+                                <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
+                                    <!-- <img alt="a" src="./pictures/slide1.jpg" /> -->
+                                </div>
+                                <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
+                                    <b>
+                                        project 2
+                                    </b>
+                                </p>
+                            </div>
+                          </div>  
+                          <div class="swiper-slide">
+                            <div class="full-width full-height d-flex flex-c align-center">
+                                <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
+                                    <!-- <img alt="a" src="./pictures/slide3.jpg" /> -->
+                                </div>
+                                <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
+                                    <b>
+                                         project 3
+                                    </b>
+                                </p>
+                            </div>
+                          </div>  
+                          <div class="swiper-slide">
+                            <div class="full-width full-height d-flex flex-c align-center">
+                                <div style=" width: 200px; height: 200px; background-color: bisque; border-radius: 8px;" class="hidden card-shadow">
+                                    <!-- <img alt="a" src="./pictures/slide4.jpg" /> -->
+                                </div>
+                                <p style="width: 200px; text-align: center; margin-top: 30px;" class="typography-style fw-500 fs-22">
+                                    <b>
+                                         Test Name 4
+                                    </b>
+                                </p>
+                            </div>
+                          </div>                 
                         </div>
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
-                            </div>
-                            <p style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px; text-align: center;" class="typography-style fw-500">
-                                Description
-                            </p>
-                        </div> 
-                        <div style="row-gap: 25px;" class="d-flex flex-c align-center">
-                            <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
-                                <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
-                            </div>
-                            <p style="text-align: center;" class="typography-style fw-500 fs-32">
-                                <b>
-                                    Title
-                                </b>
-                            </p>
-                            <p style="font-size: 18px; text-align: center;" class="typography-style fw-500">
-                                Description
-                            </p>
-                        </div> 
-                    </div>                               
+                      </div>  
                 </div> 
+            </div>
+            <div id="page-2" name="page" style="overflow-x: hidden; overflow-y: auto;" class="full-width full-page-height align-center dis-active-page flex-c scroll-dsable">
+                <div style="padding: 0 20px; row-gap: 20px; margin-top: 50px;" class="full-width d-flex flex-c align-center">
+                    <p class="typography-style fw-500 fs-32">
+                        Title
+                    </p>
+                    <div style="height: 400px; background-color: bisque; border-radius: 8px;" class="full-width card-shadow">
+        
+                    </div>
+                </div>
+                <p style="font-size: 40px; margin-top: 100px;" class="typography-style fw-500 about-key">
+                    Somebody text
+                </p>
+                <div style="margin-top: 100px; row-gap: 30px; column-gap: 30px; padding: 0 20px;" class="d-flex flex-rc aling-sc">
+                    <div style="flex: 1; height: 200px;  background-color: bisque; border-radius: 8px;" class="d-flex flex-c card-shadow">
+                        
+                    </div>
+                    <div style="flex: 1;" class="d-flex flex-c">
+                        <p style="color: rgba(2, 3, 3, 0.94); text-align: center;" class="typography-style fw-500 fs-32 full-width">
+                            Title
+                        </p>
+                        <p style="color: rgba(2, 3, 3, 0.94); text-align: center; margin-top: 10px;" class="typography-style fw-300 fs-22 full-width">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsum vero qui odit tenetur quae ratione voluptate vitae ut? Id eius dicta sapiente magnam illum excepturi. Vero eum totam nam.
+                        </p>
+                    </div>
+                </div>
+                <div style="display: block; margin-top: 100px;">
+                    <div style="row-gap: 50px; column-gap: 50px; flex-wrap: wrap;" class="d-flex flex-rc justify-between">
+                        <div style="row-gap: 50px; column-gap: 50px; flex: 1;" class="d-flex flex-c align-center">
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p  style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
+                                    Descriptio 
+                                </p>
+                            </div>
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
+                                    Description
+                                </p>
+                            </div>
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
+                                    Description
+                                </p>
+                            </div>
+                        </div>
+                        <div style="row-gap: 50px; flex: 1;" class="d-flex flex-c align-center">
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px;text-align: center;" class="typography-style fw-500">
+                                    Dexcription
+                                </p>
+                            </div>
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px; text-align: center;" class="typography-style fw-500">
+                                    Description
+                                </p>
+                            </div> 
+                            <div style="row-gap: 25px;" class="d-flex flex-c align-center">
+                                <div style="background-color: bisque; border-radius: 8px; height: 300px; width:300px" class="d-flex flex-c card-shadow">
+                                    <!-- <img class="full-width full-height" alt="a" src="./pictures/card1.jfif" /> -->
+                                </div>
+                                <p style="text-align: center;" class="typography-style fw-500 fs-32">
+                                    <b>
+                                        Title
+                                    </b>
+                                </p>
+                                <p style="font-size: 18px; text-align: center;" class="typography-style fw-500">
+                                    Description
+                                </p>
+                            </div> 
+                        </div>                               
+                    </div> 
+            </div>            
+            </div>  
+            <div id="page-3" name="page" style="overflow-x: hidden; overflow-y: auto;" class="full-width full-page-height align-center dis-active-page flex-c scroll-dsable">
                 <div style="margin-top: 100px; padding: 0 20px;" class="d-flex flex-c align-center contacts-key">
                     <p class="typography-style fw-500 fs-32">
                         Contacts
@@ -250,8 +255,7 @@
                 <p style="height: 50px;">
                     footer
                 </p>
-            </div>
-        </div>          
+            </div>             
     </div>     
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
